@@ -16,11 +16,6 @@
 
 ---
 
-> **Based on** [Resume Matcher](https://github.com/srbhr/Resume-Matcher) by [@srbhr](https://github.com/srbhr) (Apache 2.0).
-> CareerCraft AI is a fork with a refreshed UI, dark mode, and a keyword Match Score feature.
-
----
-
 ## What Is CareerCraft AI?
 
 CareerCraft AI helps you **tailor your resume to every job description** using AI-powered suggestions. Upload your master resume once, paste any job description, and get a tailored resume — with a keyword match score — in seconds.
