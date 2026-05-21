@@ -1,0 +1,300 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@source "../../../{app,components,hooks,lib,messages}/**/*.{js,ts,jsx,tsx,mdx}";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* CareerCraft AI brand tokens — Emerald + Violet palette */
+  --color-canvas: #f0fdf4;       /* Soft green-white canvas */
+  --color-ink: #1a1a2e;          /* Deep navy ink */
+  --color-success: #059669;      /* Emerald green */
+  --color-warning: #f59e0b;      /* Amber warning */
+
+  /* Brand-tinted neutrals */
+  --color-paper-tint: oklch(96% 0.008 160);   /* Light emerald tint */
+  --color-steel-grey: oklch(64% 0.010 160);   /* Muted green-grey */
+  --color-ink-soft: oklch(38% 0.015 270);     /* Soft violet-ink */
+
+  /* Soft shadows with violet tint */
+  --shadow-sw-xs: 1px 1px 0px 0px #7c3aed;
+  --shadow-sw-sm: 2px 2px 0px 0px #7c3aed;
+  --shadow-sw-default: 4px 4px 0px 0px #7c3aed;
+  --shadow-sw-card: 6px 6px 0px 0px #7c3aed;
+  --shadow-sw-lg: 8px 8px 0px 0px #7c3aed;
+  --shadow-sw-xl: 12px 12px 0px 0px #7c3aed;
+
+  /* Fonts */
+  --font-sans: 'Geist Sans', sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  /* Animations */
+  --animate-gradient: gradient 8s linear infinite;
+
+  @keyframes gradient {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+
+:root {
+  --font-mono: 'Geist Mono', monospace;
+  --font-sans: 'Geist', sans-serif;
+
+  /* CareerCraft AI — Emerald + Violet Palette */
+  --background: #f0fdf4;         /* Soft Emerald Canvas */
+  --foreground: #1a1a2e;         /* Deep Navy */
+
+  --card: #f0fdf4;
+  --card-foreground: #1a1a2e;
+
+  --popover: #f0fdf4;
+  --popover-foreground: #1a1a2e;
+
+  --primary: #7c3aed;            /* Violet — replaces Hyper Blue */
+  --primary-foreground: #ffffff;
+
+  --secondary: #d1fae5;          /* Pale Emerald Panel */
+  --secondary-foreground: #1a1a2e;
+
+  --muted: #d1fae5;
+  --muted-foreground: #6b7280;
+
+  --accent: #d1fae5;
+  --accent-foreground: #1a1a2e;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+
+  --border: #1a1a2e;             /* Navy border instead of pure black */
+  --input: #f0fdf4;
+  --ring: #7c3aed;
+
+  --chart-1: #7c3aed;
+  --chart-2: #059669;
+  --chart-3: #f59e0b;
+  --chart-4: #dc2626;
+  --chart-5: #1a1a2e;
+
+  --sidebar: #d1fae5;
+  --sidebar-foreground: #1a1a2e;
+  --sidebar-primary: #7c3aed;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #a7f3d0;
+  --sidebar-accent-foreground: #1a1a2e;
+  --sidebar-border: #1a1a2e;
+  --sidebar-ring: #7c3aed;
+}
+
+/* ── DARK MODE (Extra Feature #1) ── */
+.dark {
+  --background: #0f0f1a;
+  --foreground: #e2e8f0;
+
+  --card: #1a1a2e;
+  --card-foreground: #e2e8f0;
+
+  --popover: #1a1a2e;
+  --popover-foreground: #e2e8f0;
+
+  --primary: #a78bfa;
+  --primary-foreground: #0f0f1a;
+
+  --secondary: #1e2d3d;
+  --secondary-foreground: #e2e8f0;
+
+  --muted: #1e2d3d;
+  --muted-foreground: #94a3b8;
+
+  --accent: #1e2d3d;
+  --accent-foreground: #e2e8f0;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #334155;
+  --input: #1a1a2e;
+  --ring: #a78bfa;
+
+  --sidebar: #1a1a2e;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #a78bfa;
+  --sidebar-primary-foreground: #0f0f1a;
+  --sidebar-accent: #1e2d3d;
+  --sidebar-accent-foreground: #e2e8f0;
+  --sidebar-border: #334155;
+  --sidebar-ring: #a78bfa;
+
+  --color-canvas: #0f0f1a;
+  --color-ink: #e2e8f0;
+  --color-paper-tint: oklch(20% 0.008 270);
+  --color-steel-grey: oklch(55% 0.010 270);
+  --color-ink-soft: oklch(75% 0.015 270);
+
+  --shadow-sw-xs: 1px 1px 0px 0px #a78bfa;
+  --shadow-sw-sm: 2px 2px 0px 0px #a78bfa;
+  --shadow-sw-default: 4px 4px 0px 0px #a78bfa;
+  --shadow-sw-card: 6px 6px 0px 0px #a78bfa;
+  --shadow-sw-lg: 8px 8px 0px 0px #a78bfa;
+  --shadow-sw-xl: 12px 12px 0px 0px #a78bfa;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .resume-print,
+  .resume-print *,
+  .cover-letter-print,
+  .cover-letter-print * {
+    visibility: visible !important;
+  }
+
+  .resume-print,
+  .cover-letter-print {
+    width: 100% !important;
+    max-width: 210mm !important;
+    min-height: 0 !important;
+    position: static !important;
+    margin: 0 auto !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+
+  .resume-body {
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+
+  .resume-scale {
+    transform: none !important;
+    scale: 1 !important;
+  }
+
+  a {
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
+}
+
+/* ============================================
+   PAGE BREAK CONTROL
+   ============================================ */
+
+.resume-body .resume-item {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.resume-body .resume-section-title,
+.resume-body .resume-section-title-sm {
+  break-after: avoid;
+  page-break-after: avoid;
+  orphans: 3;
+  widows: 3;
+}
+
+.resume-body .resume-section {
+  break-inside: auto;
+}
+
+.resume-body .resume-section-title + .resume-items > *:first-child,
+.resume-body .resume-section-title-sm + .resume-items > *:first-child,
+.resume-body .resume-section-title + p,
+.resume-body .resume-section-title-sm + p,
+.resume-body .resume-section-title + ul,
+.resume-body .resume-section-title-sm + ul,
+.resume-body .resume-section-title + .resume-item,
+.resume-body .resume-section-title-sm + .resume-item {
+  break-before: avoid;
+  page-break-before: avoid;
+}
+
+.resume-body [data-no-break] {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+@media print {
+  .resume-body {
+    padding: var(--margin-top) var(--margin-right) var(--margin-bottom) var(--margin-left) !important;
+  }
+
+  .resume-body .resume-section-title,
+  .resume-body .resume-section-title-sm {
+    border-bottom-color: #9ca3af !important;
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  .resume-body .resume-item {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .resume-body .resume-section-title + .resume-items > *:first-child,
+  .resume-body .resume-section-title-sm + .resume-items > *:first-child,
+  .resume-body .resume-section-title + p,
+  .resume-body .resume-section-title-sm + p,
+  .resume-body .resume-section-title + ul,
+  .resume-body .resume-section-title-sm + ul,
+  .resume-body .resume-section-title + .resume-item,
+  .resume-body .resume-section-title-sm + .resume-item {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
+  }
+}
