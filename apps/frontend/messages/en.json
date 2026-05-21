@@ -1,0 +1,66 @@
+{
+  "home": {
+    "brandLine1": "CareerCraft",
+    "brandLine2": "AI",
+    "docs": "Docs",
+    "launchApp": "Launch App"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "goToSettings": "Go to Settings"
+  },
+  "common": {
+    "unknown": "Unknown",
+    "loading": "Loading...",
+    "error": "Error",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "save": "Save",
+    "close": "Close"
+  },
+  "dashboard": {
+    "masterResume": "Master Resume",
+    "tailoredResume": "Tailored Resume",
+    "createResume": "Tailor New Resume",
+    "initializeMasterResume": "Upload Master Resume",
+    "initializeSequence": "Start by uploading your base resume",
+    "setupRequiredTitle": "Setup Required",
+    "setupRequiredMessage": "Configure your AI provider in Settings to get started.",
+    "llmNotConfiguredTitle": "AI Provider Not Configured",
+    "llmNotConfiguredMessage": "Go to Settings to add your API key.",
+    "statusLine": "Status: {status}",
+    "retryProcessing": "Retry",
+    "retryingProcessing": "Retrying...",
+    "deleteAndReupload": "Delete & Re-upload",
+    "edited": "Edited {date}",
+    "matchScore": "Match Score",
+    "status": {
+      "checking": "Checking...",
+      "processing": "Processing...",
+      "ready": "Ready",
+      "failed": "Failed",
+      "pending": "Pending"
+    }
+  },
+  "confirmations": {
+    "deleteMasterResumeTitle": "Delete Master Resume?",
+    "deleteMasterResumeDescription": "This will remove your master resume and all tailored versions. This action cannot be undone.",
+    "keepResumeCancelLabel": "Keep Resume"
+  },
+  "tailor": {
+    "title": "Tailor Resume",
+    "jobDescription": "Job Description",
+    "jobDescriptionPlaceholder": "Paste the job description here...",
+    "generate": "Generate Tailored Resume",
+    "generating": "Generating..."
+  },
+  "settings": {
+    "title": "Settings",
+    "aiProvider": "AI Provider",
+    "apiKey": "API Key",
+    "save": "Save Settings",
+    "saved": "Settings saved!"
+  }
+}
